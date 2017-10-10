@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Shapes;
 using System.Windows.Media;
-using System.IO;
+using System.Windows.Shapes;
 
-
-namespace DotsDotsDots
+namespace MyProject.App.v1
 {
     public class MyWindow : Window
     {
         Grid myGrid = new Grid();
         Brush fillColor = System.Windows.Media.Brushes.Azure;
         Brush BGBrush = System.Windows.Media.Brushes.LightYellow;
-        private Label label1=new Label();
-        
+        private Label label1 = new Label();
+
         ComboBox fillComboBox = new ComboBox();
         ComboBox colorComboBox = new ComboBox();
         PointCollection points = new PointCollection();
@@ -28,14 +29,14 @@ namespace DotsDotsDots
             int MoveX = 200;
             int MoveY = 200;
             Point bufferPoint = new Point();
-            
+
             Content = myGrid;
             //Считываю строку с точками из файла
             //PointCollection readPoints = PointCollection.Parse(ReadPoints()); 
 
             //Так как строку с точками мы больше не считываем из файла, строка будет храниться в таком виде, сразу считаем количество
             PointCollection readPoints = PointCollection.Parse("20,20 846,20 868,40 42,40  912,40 934,60 956,80 868,80 846,60 64,60  86,80  980,80 1002,100 1024,120 868,120 846,100 108,100  130,120 920,120 894,140  152,140 868,160 460,160 438,140");
-             int pCount = readPoints.Count();
+            int pCount = readPoints.Count();
 
             //Этот цикл тут для того, чтобы можно было двигать всю структуру.
             for (int i = 0; i < pCount;)
@@ -52,19 +53,19 @@ namespace DotsDotsDots
             colorComboBox.VerticalAlignment = VerticalAlignment.Top;
 
             //Быстрый способ заполнить комбобоксы, сразу зададим выбор по умолчанию
-            for (int i = 0; i < 9; i++){colorComboBox.Items.Add("Цвет " + (i + 1));}
+            for (int i = 0; i < 9; i++) { colorComboBox.Items.Add("Цвет " + (i + 1)); }
             colorComboBox.SelectedIndex = 0;
             colorComboBox.Margin = new Thickness(100, 0, 0, 0);
 
-            for (int i = 0; i < 9; i++){fillComboBox.Items.Add("Заливка " + (i + 1));}
+            for (int i = 0; i < 9; i++) { fillComboBox.Items.Add("Заливка " + (i + 1)); }
             fillComboBox.SelectedIndex = 0;
 
             //Просто текст. Отображается текст из комбобокса с вариантом заливки.
             label1.Content = fillComboBox.Text;
             label1.FontSize = 20;
-            label1.Foreground= System.Windows.Media.Brushes.Black;
+            label1.Foreground = System.Windows.Media.Brushes.Black;
             label1.Margin = new Thickness(550 + MoveX, 60 + MoveY, 0, 0);
-            
+
             //Рисуем всё
             myGrid.Children.Add(fillComboBox);
             myGrid.Children.Add(colorComboBox);
@@ -273,7 +274,7 @@ namespace DotsDotsDots
         /*  Автоматически вызывается при изменении списка с вариантами заполнения. Также вызывается вручную при изменении списка с выбором цвета.
          *  Функция очищает и перерисовывает окно. 
          */
-        void Event_Fill (object sender, SelectionChangedEventArgs e)
+        void Event_Fill(object sender, SelectionChangedEventArgs e)
         {
             myGrid.Children.Clear();
             myGrid.Children.Add(fillComboBox);
