@@ -1,0 +1,8 @@
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\bin\Debug\MyProject.exe.config
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\bin\Debug\MyProject.exe
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\bin\Debug\MyProject.pdb
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\obj\Debug\MyProject.exe
+c:\users\sonic\documents\visual studio 2017\Projects\MyProject\MyProject\obj\Debug\MyProject.pdb
