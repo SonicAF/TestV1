@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyProject.Properties
+namespace MyProject.App.v2.Properties
 {
 
 
